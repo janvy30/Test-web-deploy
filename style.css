@@ -1,0 +1,239 @@
+/* ===== General Styling ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8fafc;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: #002b5b;
+  color: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo span {
+  color: #00aaff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00aaff;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1498050108023-c5249f4df085") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 43, 91, 0.7);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #00aaff;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #008ecc;
+}
+
+/* ===== Services ===== */
+.services {
+  padding: 80px 20px;
+  text-align: center;
+  background: white;
+}
+
+.services h2 {
+  font-size: 32px;
+  color: #002b5b;
+  margin-bottom: 40px;
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service {
+  background-color: #f0f4f8;
+  padding: 30px;
+  border-radius: 12px;
+  width: 300px;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service:hover {
+  transform: translateY(-5px);
+}
+
+.service i {
+  font-size: 40px;
+  color: #00aaff;
+  margin-bottom: 15px;
+}
+
+/* ===== About Section ===== */
+.about {
+  background-color: #f8fafc;
+  padding: 80px 20px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-content img {
+  width: 400px;
+  border-radius: 12px;
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+/* ===== Contact Section ===== */
+.contact {
+  background: linear-gradient(to right, #002b5b, #004b8d);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #001f3f;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* ===== Animations ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content img {
+    width: 90%;
+  }
+
+  .service {
+    width: 90%;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+}
